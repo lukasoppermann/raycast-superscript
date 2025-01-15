@@ -1,0 +1,84 @@
+{
+  "$schema": "https://www.raycast.com/schemas/extension.json",
+  "name": "subsuper",
+  "title": "Sub- & Superscript",
+  "description": "Copies super script special characters to the clipboad",
+  "icon": "command-icon.png",
+  "author": "lukasoppermann",
+  "categories": [
+    "Productivity"
+  ],
+  "license": "MIT",
+  "commands": [
+    {
+      "name": "index",
+      "title": "Sub Superscript character",
+      "subtitle": "Copy superscript character to clipboard",
+      "description": "Copy a unicode superscript character to your clipboard.",
+      "mode": "no-view",
+      "arguments": [
+        {
+          "name": "char",
+          "placeholder": "Character",
+          "type": "text",
+          "required": true
+        }
+      ]
+    },
+     {
+      "name": "list",
+      "title": "List history",
+      "subtitle": "Copy superscript character to clipboard",
+      "description": "Copy a unicode superscript character to your clipboard.",
+      "mode": "view",
+      "arguments": [
+        {
+          "name": "char",
+          "placeholder": "Character",
+          "type": "text",
+          "required": true
+        }
+      ]
+    }
+  ],
+  "preferences": [
+    {
+      "type": "checkbox",
+      "title": "Paste in app",
+      "description": "Pastes the superscript string into the frontmost app",
+      "name": "paste",
+      "label": "Paste in frontmost app",
+      "required": true
+    },
+    {
+      "type": "checkbox",
+      "title": "Copy to clipboard",
+      "description": "Copies the superscript string into the clipboard",
+      "name": "copy",
+      "label": "Copy to clipboard",
+      "required": true
+    }
+  ],
+  "dependencies": {
+    "@raycast/api": "^1.43.2",
+    "@raycast/utils": "^1.4.8",
+    "superscript-text": "^1.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "18.8.3",
+    "@types/react": "18.0.9",
+    "@typescript-eslint/eslint-plugin": "^5.0.0",
+    "@typescript-eslint/parser": "^5.0.0",
+    "eslint": "^7.32.0",
+    "eslint-config-prettier": "^8.3.0",
+    "prettier": "^2.5.1",
+    "typescript": "^4.4.3"
+  },
+  "scripts": {
+    "build": "ray build -e dist",
+    "dev": "ray develop",
+    "fix-lint": "ray lint --fix",
+    "lint": "ray lint",
+    "publish": "ray publish"
+  }
+}
